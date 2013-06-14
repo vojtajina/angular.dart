@@ -2,3 +2,26 @@ li.done {
   color: gray;
   text-decoration: line-through;
 }
+
+input[type="text"] {
+  height: 30px;
+  width: 192px;
+}
+
+.border {
+  width: 360px;
+  margin: 20px auto;
+  padding-top: 0;
+}
+
+.right {
+  float: right;
+}
+
+form button {
+  width: 80px;
+}
+
+ul.well {
+  background: white;
+}

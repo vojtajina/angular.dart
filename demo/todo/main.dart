@@ -45,10 +45,12 @@ main() {
   module.directive(NgControllerAttrDirective);
   module.directive(NgModelAttrDirective);
   module.directive(NgClickAttrDirective);
-  module.directive(NgBindAttrDirective);
-  module.directive(NgRepeatAttrDirective);
   module.directive(NgClassAttrDirective);
   module.directive(NgDisabledAttrDirective);
+
+  module.directive(NgTextMustacheDirective);
+  module.directive(NgBindAttrDirective);
+  module.directive(NgRepeatAttrDirective);
 
   bootstrapAngular([module]);
 }

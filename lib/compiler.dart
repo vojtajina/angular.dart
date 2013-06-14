@@ -81,7 +81,7 @@ class Compiler {
         templateCursor.descend();
 
         childDirectivePositions = compileChildren
-            ? _compileBlock(domCursor, templateCursor, blockCaches, useExistingDirectiveInfos)
+            ? _compileBlock(domCursor, templateCursor, blockCaches, null)
             : null;
 
         domCursor.ascend();

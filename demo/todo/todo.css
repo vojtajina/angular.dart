@@ -12,6 +12,7 @@ input[type="text"] {
   width: 360px;
   margin: 20px auto;
   padding-top: 0;
+  padding-bottom: 0;
 }
 
 .right {

@@ -34,7 +34,7 @@ class TodoController {
 
   TodoController(Scope this.scope) {
     newItem = new Item();
-    items = [new Item('Misko'), new Item('Vojta'), new Item('Igor')];
+    items = [new Item('Write Angular in Dart', true), new Item('Write Dart in Angular'), new Item('Do something useful')];
 
     // export to scope
     // how about automatic exporting all public properties/methods ?
@@ -45,7 +45,6 @@ class TodoController {
     scope['markAllDone'] = this.markAllDone;
     scope['archiveDone'] = this.archiveDone;
     scope['classFor'] = this.classFor;
-    scope['toggleFirstItem'] = this.toggleFirstItem;
     scope['remaining'] = this.remaining;
   }
 
@@ -75,12 +74,6 @@ class TodoController {
     });
 
     _refreshItems();
-  }
-
-  toggleFirstItem() {
-    if (items.length > 0) {
-      items[0].done = !items[0].done;
-    }
   }
 
   classFor(Item item) {

@@ -22,19 +22,19 @@
 
 
     <ul class="well unstyled">
-        <li ng-repeat="item in items" ng-bind="item.text" ng-class="classFor(item)"></li>
+        <li ng-repeat="item in items" ng-class="classFor(item)">
+            <label class="checkbox">
+                <input type="checkbox" ng-model="item.done"> {{item.text}}
+            </label>
+        </li>
     </ul>
 
     <form class="form-inline" onsubmit="return false;">
         <input type="text" ng-model="newItem.text">
         <button ng-click="add()" ng-disabled="newItem.text.isEmpty" class="btn btn-primary">add</button>
-        <button ng-click="newItem.text = ''" class="btn">clear</button>
+        <button ng-click="newItem.text = ''" ng-disabled="newItem.text.isEmpty" class="btn">clear</button>
     </form>
 
-<hr>
-    <button ng-click="toggleFirstItem()">toggle first item</button>
-
-    <input type="checkbox" ng-model="checked"/><span ng-bind="checked"></span>
 </div>
 </body>
 </html>

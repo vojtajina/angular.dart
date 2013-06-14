@@ -9,6 +9,8 @@ import 'click.dart';
 import 'model.dart';
 import 'class.dart';
 import 'disabled.dart';
+import 'cloak.dart';
+import 'hide.dart';
 
 import 'todo.dart';
 
@@ -47,6 +49,8 @@ main() {
   module.directive(NgClickAttrDirective);
   module.directive(NgClassAttrDirective);
   module.directive(NgDisabledAttrDirective);
+  module.directive(NgCloakAttrDirective);
+  module.directive(NgHideAttrDirective);
 
   module.directive(NgTextMustacheDirective);
   module.directive(NgBindAttrDirective);

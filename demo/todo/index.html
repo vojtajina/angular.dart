@@ -7,7 +7,10 @@
     <script src="main.dart" type="application/dart"></script>
 </head>
 <body ng-app>
-<div ng-controller="Todo" class="border well">
+
+<div ng-hide="true" class="border well loading">Wait, Dart is loading this awesome app...</div>
+
+<div ng-controller="Todo" class="border well" ng-cloak>
     <h2>Things To Do ;-)</h2>
 
     <div class="right">

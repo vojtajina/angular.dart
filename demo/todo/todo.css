@@ -30,3 +30,15 @@ p {
   margin: 0 0 6px;
   padding-top: 4px;
 }
+
+[ng-cloak] {
+  display: none;
+}
+
+.loading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

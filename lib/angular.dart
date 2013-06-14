@@ -99,6 +99,7 @@ _relaxFnArgs(Function fn) {
 
 
 class AngularModule extends Module {
+  // TODO(vojta): can not register directives in multiple modules, as each overrides the directives list; lame.
   Directives _directives = new Directives();
 
   AngularModule() {

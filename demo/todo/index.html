@@ -1,0 +1,27 @@
+<html>
+<head>
+    <link rel="stylesheet" href="todo.css">
+    <script src="/packages/browser/dart.js"></script>
+    <script src="/packages/browser/interop.js"></script>
+    <script src="main.dart" type="application/dart"></script>
+</head>
+<body ng-app>
+<div ng-controller="Todo">
+    <h1>List of things to do</h1>
+
+    <button ng-click="markAllDone()">mark all done</button>
+    <button ng-click="archiveDone()">archive done</button>
+
+    <ul>
+        <li ng-repeat="item in items" ng-bind="item.text" ng-class="classFor(item)"></li>
+    </ul>
+
+    <input type="checkbox" ng-model="checked"/><span ng-bind="checked"></span>
+    <input type="text" ng-model="newItem.text"/>
+    <button ng-click="newItem.text = ''">clear</button>
+    <button ng-click="add()" ng-disabled="newItem.text.isEmpty">add</button>
+
+    <button ng-click="toggleFirstItem()">toggle first item</button>
+</div>
+</body>
+</html>

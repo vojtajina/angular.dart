@@ -78,7 +78,9 @@ class TodoController {
   }
 
   toggleFirstItem() {
-    items[0].done = !items[0].done;
+    if (items.length > 0) {
+      items[0].done = !items[0].done;
+    }
   }
 
   classFor(Item item) {

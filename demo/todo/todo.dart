@@ -46,6 +46,7 @@ class TodoController {
     scope['archiveDone'] = this.archiveDone;
     scope['classFor'] = this.classFor;
     scope['toggleFirstItem'] = this.toggleFirstItem;
+    scope['remaining'] = this.remaining;
   }
 
   // workaround, because we can't watch deeply
@@ -82,5 +83,15 @@ class TodoController {
 
   classFor(Item item) {
     return item.done ? 'done' : '';
+  }
+
+  remaining() {
+    var remaining = 0;
+
+    items.forEach((item) {
+      if (!item.done) remaining++;
+    });
+
+    return remaining;
   }
 }

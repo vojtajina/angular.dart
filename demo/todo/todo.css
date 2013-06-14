@@ -25,3 +25,8 @@ form button {
 ul.well {
   background: white;
 }
+
+p {
+  margin: 0 0 6px;
+  padding-top: 4px;
+}

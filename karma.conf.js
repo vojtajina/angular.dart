@@ -70,13 +70,14 @@ module.exports = function(config) {
       outputFile: 'test_out/unit.xml',
       suite: 'unit'
     },
+
     sauceLabs: {
-        testName: 'AngularDart',
-        'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-        'startConnect': false,
-        options:  {
-            'selenium-version': '2.41.0'
-        }
+      'testName': 'AngularDart',
+      'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
+      'startConnect': false,
+      'options':  {
+        'selenium-version': '2.41.0'
+      }
     }
   });
 };

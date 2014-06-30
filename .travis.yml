@@ -30,7 +30,8 @@ env:
   - LOGS_DIR=/tmp/angular-build/logs
   - BROWSER_PROVIDER_READY_FILE=/tmp/sauce-connect-ready
   - SAUCE_USERNAME=angular-ci
-  - SAUCE_ACCESS_KEY=9b988f434ff8-fbca-8aa4-4ae3-35442987
+  # - SAUCE_ACCESS_KEY=9b988f434ff8-fbca-8aa4-4ae3-35442987
+  - SAUCE_ACCESS_KEY=78924453-3ea4-4aa8-acbf-8ff434f889b9
 
 branches:
   except:
@@ -40,7 +41,7 @@ before_install:
 - ./scripts/travis/install.sh
 before_script:
 - mkdir -p $LOGS_DIR
-- export SAUCE_ACCESS_KEY=`echo $SAUCE_ACCESS_KEY | rev`
+# - export SAUCE_ACCESS_KEY=`echo $SAUCE_ACCESS_KEY | rev`
 - ./scripts/travis/setup.sh
 - ./scripts/sauce/sauce_connect_setup.sh
 - ./scripts/sauce/sauce_connect_block.sh

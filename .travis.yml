@@ -30,8 +30,8 @@ env:
   - LOGS_DIR=/tmp/angular-build/logs
   - BROWSER_PROVIDER_READY_FILE=/tmp/sauce-connect-ready
   - SAUCE_USERNAME=angular-ci
-  - SAUCE_ACCESS_KEY=78924453-3ea4-4aa8-acbf-8ff434f889b9
-  
+  - SAUCE_ACCESS_KEY=9b988f434ff8-fbca-8aa4-4ae3-35442987
+
 branches:
   except:
   - g3v1x-master
